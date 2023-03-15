@@ -1,0 +1,64 @@
+<!--  this program creates a website with text, images and links -->
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+   
+   <!-- creates a title for the page -->
+    <title>Saved for later</title>
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  
+    <header class="page-header">
+        <!-- adds a logo to the header, if you press the logo it takes you to the home page -->
+        <a href="index.html"><img  href="index.html" src="images/tomato-logo.jpg" alt= "Logo missing" width="20%"></a>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tvshows.html">TV Shows</a>
+        <a href="books.html">Books</a>
+        <a style="background-color: rgb(220, 218, 218)" href="saveforlater.html">Saved for Later</a>
+    </header>
+    <main>
+        <section>
+            <!-- creates a header with an ID to be used for the link "Back to top of page" -->
+            <h1 id="theheading">SAVED FOR LATER</h1>
+            <p id="para1"></p>
+            <!-- If no links are saved it displays no links saved, pick favourites -->
+            <script>
+                let savedPar = document.getElementById("para1")
+                    savedPar.innerHTML = "There are no links saved, don't forget to pick your favourites!"
+            </script>
+            <!-- creates a container for our saved links, there is a script to get items from session storage,
+                or create a new array if empty, then it creates new elements to display the links 
+                and appends them to our container -->
+            <div id="saved-links-container">
+                <script> 
+                    const savedLinksContainer = document.querySelector('#saved-links-container');
+                    const savedLinks = JSON.parse(sessionStorage.getItem('savedLinks')) || [];
+                    savedLinks.forEach(link => {
+                    const linkElement = document.createElement('a');
+                    linkElement.setAttribute('href', link);
+                    linkElement.setAttribute('id', "saved-link");
+                    linkElement.textContent = link;
+                    savedLinksContainer.appendChild(linkElement);
+                    savedPar.innerHTML = "Here are your saved links:"
+                });
+                </script>   
+            </div>
+    </main>
+    <footer>
+       <!-- creates a submit button form inside the footer and submit button that calls subscribe function-->
+        <form>
+            <label>SUBSCRIBE</label>
+            <label for="fname">Name:</label>
+            <input type="text" id="name" name="name"> 
+            <label for="email">Email:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit" onclick="subscribe()">
+        </form>
+        <p>Copyright &#169 Xio Appleby. All rights reserved.<br><a href="#theheading" >Back to top</a></p>
+    </footer>
+    <script type='text/javascript' src="scripts/freshTomatoes.js"></script>   
+</body> 
+</html>

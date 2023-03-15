@@ -1,0 +1,87 @@
+<!--  this program creates a website with text, images and links -->
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+   <!-- creates a title for the page -->
+    <title>Xio's Fresh Tomatoes</title>
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="page-header">
+        <!-- adds a logo to the header, if you press the logo it takes you to the home page -->
+        <a href="index.html"><img  href="index.html" src="images/tomato-logo.jpg" alt= "Logo missing" width="20%"></a>
+        <a style="background-color: rgb(220, 218, 218)" href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tvshows.html">TV Shows</a>
+        <a href="books.html">Books</a>
+        <a href="saveforlater.html">Saved for Later</a>
+    </header>
+    <main>
+        <section>
+            <!-- creates a header with an ID to be used for the link "Back to top of page" -->
+            <h1 id="theheading">NEW RELEASES</h1>
+            <p id="para1">Xio's Fresh Tomatoes looks for the best new releases so you don't have to scroll for hours trying to find something to watch or read. </p>
+            <p>Maybe you've had a bad recommendation before and are not sure if you can trust me. Don't worry, I understand, I have been there too!</p>
+            <p>That's why I have put together a handy list, if any of the following ring true then these picks are for YOU:</p>
+            <!-- creates an unordered list -->
+
+            <ul>
+                <li>Watch a lot of true stories</li>
+                <li>Can't get enough cerebral sci-fi</li>
+                <li>Have never said: <q>I don't do subtitles!</q></li>
+                <li>Can't stand movies that feel like 2 hours of explosions</li>
+                <li>Love korean historical dramas (ok, maybe too niche)</li>
+            </ul>
+        </section>
+        <br>
+        <section>
+            <!-- uses a <figure> element to mark up the photo, and a <figcaption> element to add a caption for the image, if you click anywhere in the picture or caption it takes you to another page within the directory-->
+            <h2>Short for time?</h2>
+            <figure>
+                <a href="movies.html">
+                    <img src="images/the-wonder.jpg" alt="Oops, image missing" width="100%"><br>Go to Movies
+                </a>
+            </figure>
+            <br>
+            <br>
+            <h2>Ready to commit?</h2>
+            <figure>
+                <a href="tvshows.html">
+                    <img src="images/severance.jpg" alt="Oops, image missing" width="100%"><br>Go to TV Shows</a>
+            </figure>
+            <br>
+            <br>
+            <h2>Need a digital detox?</h2>
+            <figure>
+                <a href="books.html">
+                    <img src="images/zen.jpg" alt="Oops, image missing" width="100%"><br>Go to Books
+                </a>
+            </figure>
+            <br>
+            <br>
+        </section>
+        <aside>
+            <!-- creates a grid table for testimonials-->
+            <h3>Testimonials</h3>
+            <div class="grid-container">
+                <div class="grid-item"><q>I never write reviews but I had to share how much I love Xio's recommendations, I can't wait to see what else is coming!</q> - Annie</div>
+                <div class="grid-item"><q>Great suggestions, Severance was the best TV Show I've seen this year!</q> - Ben</div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+       <!-- creates a submit button form inside the footer and submit button that calls subscribe function-->
+        <form>
+            <label>SUBSCRIBE</label>
+            <label for="fname">Name:</label>
+            <input type="text" id="name" name="name"> 
+            <label for="email">Email:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit" onclick="subscribe()">
+        </form>
+        <p>Copyright &#169 Xio Appleby. All rights reserved.<br><a href="#theheading" >Back to top</a></p>
+    </footer>
+    <script type='text/javascript' src="scripts/freshTomatoes.js"></script>
+</body> 
+</html>

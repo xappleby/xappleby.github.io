@@ -1,0 +1,107 @@
+<!--  this is our tv shows page that links to the main page -->
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+   <!-- creates a title for the page -->
+    <title>Xio's Fresh Tomatoes -TV Shows</title>
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="page-header">
+        <!-- adds a logo to the header, if you press the logo it takes you to the home page -->
+        <a href="index.html"><img  href="index.html" src="images/tomato-logo.jpg" alt= "Logo missing" width="20%"></a>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a style="background-color: rgb(220, 218, 218)" href="tvshows.html">TV Shows</a>
+        <a href="books.html">Books</a>
+        <a href="saveforlater.html">Saved for Later</a>
+    </header>
+    <main>
+        <section>
+            <!-- creates a header with an ID to be used for the link "Back to top of page" -->
+            <h1 id="theheading">TV SHOWS</h1>
+            <p id="para1">This is it, the big commitment! These are amazing shows that will keep you hooked. Tell your friends you won't be available for a while.</p>
+        </section>
+        <br>
+        <section>
+            <!-- uses a <figure> element to mark up the photo, and a <figcaption> element to add a caption for the image including a link to other pages-->
+            <h2>Severance <center>
+            </center></h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=xEQP4VVuyrY" target="_blank">
+                    <img src="images/severance.jpg" alt="Oops, image missing" width="100%"><br>Watch Trailer
+                </a>
+                <p>Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives; when a mysterious colleague appears outside of work, it begins a journey to discover the truth about their jobs.</p>
+                <button type="button" class="save" id="https://www.youtube.com/watch?v=xEQP4VVuyrY">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>For All Mankind</h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=HZS9M52Bd_w" target="_blank">
+                    <img src="images/for-all-mankind.jpg" alt="Oops, image missing" width="100%"><br>Watch Trailer
+                </a>
+                <p>The high-stakes lives of NASA astronauts and their families in a world where the global space race never ended.</p>
+                <button type="button" class="save" id="https://www.youtube.com/watch?v=HZS9M52Bd_w">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>Dark</h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=rrwycJ08PSA" target="_blank">
+                    <img src="images/dark.jpg" alt="Oops, image missing" width="100%"><br>Watch Trailer
+                </a>
+                <p>A missing child sets four families on a frantic hunt for answers as they unearth a mind-bending mystery that spans three generations.</p>
+                <button type="button" class="save" id="https://www.youtube.com/watch?v=rrwycJ08PSA">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>Pachinko</h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=O1r5XXJOYNA" target="_blank">
+                    <img src="images/pachinko.jpg" alt="Oops, image missing" width="100%"><br>Watch Trailer
+                </a>
+                <p>Based on the New York Times bestseller, this sweeping saga chronicles the hopes and dreams of a Korean immigrant family across four generations as they leave their homeland in an indomitable quest to survive and thrive.
+                </p>
+                <button type="button" class="save" id="https://www.youtube.com/watch?v=O1r5XXJOYNA">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+        </section>
+        <aside id="comment-form">
+            <!-- creates a radio button form-->
+            <!-- creates a comment box and a submit button that calls userComment function-->
+            <p class="larger-font">Did you watch these? Let me know which one was your favourite:</p>
+            <input type="radio" id="severance" name="fav_show" value="Severance">
+            <label for="sev">Severance</label><br>
+            <input type="radio" id="mankind" name="fav_show" value="For All Mankind">
+            <label for="mankind">For All Mankind</label><br>
+            <input type="radio" id="dark" name="fav_show" value="Dark">
+            <label for="dark">Dark</label><br>
+            <input type="radio" id="pachinko" name="fav_show" value="Pachinko">
+            <label for="pachinko">Pachinko</label><br><br>
+            <label for="why">Tell us what you liked about your pick:</label><br>
+            <input type="text" id="comment" name="comment"><br>
+            <input type="submit" onclick="userComment()">
+        </aside>  
+    </main>
+    <footer>
+        <!-- creates a submit button form inside the footer and submit button that calls subscribe function-->
+        <form>
+            <label>SUBSCRIBE</label>
+            <label for="fname">Name:</label>
+            <input type="text" id="name" name="name"> 
+            <label for="email">Email:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit" onclick="subscribe()">
+        </form>
+        <p>Copyright &#169 Xio Appleby. All rights reserved.<br><a href="#theheading" >Back to top</a></p>
+    </footer>
+    <script type='text/javascript' src="scripts/freshTomatoes.js"></script>
+</body> 
+</html>

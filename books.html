@@ -1,0 +1,97 @@
+<!--  this is our books page that links to the main page -->
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+   <!-- creates a title for the page -->
+    <title>Xio's Fresh Tomatoes - Books</title>
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="page-header">
+        <!-- adds a logo to the header, if you press the logo it takes you to the home page -->
+        <a href="index.html"><img  href="index.html" src="images/tomato-logo.jpg" alt= "Logo missing" width="20%"></a>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tvshows.html">TV Shows</a>
+        <a style="background-color: rgb(220, 218, 218)" href="books.html">Books</a>
+        <a href="saveforlater.html">Saved for Later</a>
+    </header>
+    <main>
+        <section>
+            <!-- creates a header with an ID to be used for the link "Back to top of page" -->
+            <h1 id="theheading">BOOKS</h1>
+            <p id="para1">Take a coffee break and grab one of these books, there is something for everyone!</p>
+        </section>
+        <br>
+        <section>
+            <h2>Zen: The Art of Simple Living</h2>
+            <!-- uses a <figure> element to mark up the photo, and a <figcaption> element to add a caption for the image, if you click anywhere in the picture or caption it takes you to another website-->
+            <figure>
+                <a href="https://www.goodreads.com/book/show/41081321-zen" target="_blank">
+                    <img src="images/zen.jpg" alt="Oops, image missing" width="100%"><br>Goodreads Link
+                </a>
+                <p>In clear, practical and easy to follow lessons - one a day for 100 days - renowned Buddhist monk Shunmyo Masuno draws on centuries of wisdom to show you how to apply the essence of Zen to modern life.</p>
+                <button type="button" class="save" id="https://www.goodreads.com/book/show/41081321-zen">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>Courage is Calling: Fortune Favours the Brave</h2>
+            <figure>
+                <a href="https://www.goodreads.com/en/book/show/58145670-courage-is-calling" target="_blank">
+                    <img src="images/courage.jpg" alt="Oops, image missing" width="100%"><br>Goodreads Link
+                </a>
+                <p>Drawing on ancient Stoic wisdom and examples across history and around the world, Ryan Holiday shows why courage is so important, and how to cultivate it in our own lives. 
+                    Courage is not simply physical bravery but also doing the right thing and standing up for what you believe; it's creativity, generosity and perseverance. 
+                    And it is the only way to live an extraordinary, fulfilled and effective life.</p>
+                <button type="button" class="save" id="https://www.goodreads.com/en/book/show/58145670-courage-is-calling">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>The Midnight Library</h2>
+            <figure>
+                <a href="https://www.goodreads.com/book/show/52578297-the-midnight-library?from_search=true&from_srp=true&qid=NAzhv8xerV&rank=1" target="_blank">
+                    <img src="images/midnight-library.jpg" alt="Oops, image missing" width="100%"><br>Goodreads Link
+                </a>
+                <p>Between life and death there is a library. When Nora Seed finds herself in the Midnight Library, she has a chance to make things right. Up until now, her life has been full of misery and regret. 
+                   The books in the Midnight Library enable Nora to live as if she had done things differently. 
+                    With the help of an old friend, she can now undo every one of her regrets as she tries to work out her perfect life. 
+                    Before time runs out, she must answer the ultimate question: what is the best way to live?</p>
+                <button type="button" class="save" id="https://www.goodreads.com/book/show/52578297-the-midnight-library?from_search=true&from_srp=true&qid=NAzhv8xerV&rank=1">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+        </section>
+        <aside id="comment-form">
+            <!-- creates a radio button form-->
+            <!-- creates a comment box and a submit button that calls userComment function-->
+            <p class="larger-font">Did you read these? Let me know which one was your favourite:</p>
+            <input type="radio" id="zen" name="fav_book" value="Zen: The Art of Simple Living">
+            <label for="zen">Zen: The Art of Simple Living</label><br>
+            <input type="radio" id="courage" name="fav_book" value="Courage is Calling: Fortune Favours the Brave">
+            <label for="courage">Courage is Calling: Fortune Favours the Brave</label><br>
+            <input type="radio" id="midnight-library" name="fav_book" value="The Midnight Library">
+            <label for="midnight-library">The Midnight Library</label><br><br>
+            <label for="why">Tell us what you liked about your pick:</label><br>
+            <input type="text" id="comment" name="comment"><br>
+            <input type="submit" onclick="userComment()">
+        </aside>
+    </main>
+    <footer>
+        <!-- creates a submit button form inside the footer and submit button that calls subscribe function-->
+        <form>
+            <label>SUBSCRIBE</label>
+            <label for="fname">Name:</label>
+            <input type="text" id="name" name="name"> 
+            <label for="email">Email:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit" onclick="subscribe()">
+        </form>
+        <p>Copyright &#169 Xio Appleby. All rights reserved.<br><a href="#theheading" >Back to top</a></p>
+    </footer>
+    <script type='text/javascript' src="scripts/freshTomatoes.js"></script>
+</body> 
+</html>

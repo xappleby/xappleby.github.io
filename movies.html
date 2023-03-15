@@ -1,0 +1,94 @@
+<!--  this is our movies page that links to the main page -->
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+   <!-- creates a title for the page -->
+    <title>Xio's Fresh Tomatoes - Movies </title>
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="page-header">
+        <!-- adds a logo to the header, if you press the logo it takes you to the home page -->
+        <a href="index.html"><img  href="index.html" src="images/tomato-logo.jpg" alt= "Logo missing" width="20%"></a>
+        <a href="index.html">Home</a>
+        <a style="background-color: rgb(220, 218, 218)" href="movies.html">Movies</a>
+        <a href="tvshows.html">TV Shows</a>
+        <a href="books.html">Books</a>
+        <a href="saveforlater.html">Saved for Later</a>
+    </header>
+    <main>
+        <section>
+            <!-- creates a header with an ID to be used for the link "Back to top of page" -->
+            <h1 id="theheading">MOVIES</h1>
+            <p id="para1">If you need a break from bingeing TV Shows that keep you from leaving the house, watch these single serving movies!</p>
+        </section>
+        <br>
+        <section>
+            <!-- uses a <figure> element to mark up the photo, and a <figcaption> element to add a caption for the image, if you click anywhere in the picture or caption it takes you to another website-->
+            <h2>The Wonder</h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=htybz7XscIY" target="_blank">
+                    <img src="images/the-wonder.jpg" alt="Oops, image missing" width="100%"><br>Watch Trailer
+                </a>
+                <p> A psychological thriller set in the Irish Midlands, 1862. A young girl stops eating but remains miraculously alive and well. 
+                    English nurse Lib Wright is brought to a tiny village to observe eleven-year old Anna O'Donnell. Tourists and pilgrims mass to witness the girl who is said to have survived without food for months. </p>
+                    <button type="button" class="save" id="https://www.youtube.com/watch?v=htybz7XscIY">Save for later</button>
+                    <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>The Good Nurse</h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=e0DQevX-GZs" target="_blank">
+                    <img src="images/the-good-nurse.jpg" alt="Oops, image missing" width="100%"><br>Watch Trailer
+                </a>
+                <p>Suspicious that her colleague is responsible for a series of mysterious patient deaths, a nurse risks her own life to uncover the truth in this gripping thriller based on true events.</p>
+                <button type="button" class="save" id="https://www.youtube.com/watch?v=e0DQevX-GZs">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+            <h2>Stutz</h2>
+            <figure>
+                <a href="https://www.youtube.com/watch?v=UKCmefQdplI" target="_blank">  
+                    <img src="images/stutz.jpg" alt="Oops, image missing" width="100%" ><br>Watch Trailer
+                </a>
+                <p>Phil Stutz is one of the world's leading psychiatrists. He's helped countless patients over 40 years, including world-class creatives and business leader. 
+                    Directed by friend and patient Jonah Hill, the film explores Stutz's life and walks the viewer through his signature visualization exercises, The Tools.</p>
+                <button type="button" class="save" id="https://www.youtube.com/watch?v=UKCmefQdplI">Save for later</button>
+                <button class="like">LIKE</button>
+            </figure>
+            <br>
+            <br>
+        </section>
+        <aside id="comment-form">
+            <!-- creates a radio button form-->
+            <!-- creates a comment box and a submit button that calls userComment function-->
+            <p class="larger-font">Did you watch these? Let me know which one was your favourite:</p>
+            <input type="radio" id="wonder" name="fav_movie" value="The Wonder">
+            <label for="wonder">The Wonder</label><br>
+            <input type="radio" id="good-nurse" name="fav_movie" value="The Good Nurse">
+            <label for="good-nurse">The Good Nurse</label><br>
+            <input type="radio" id="stutz" name="fav_movie" value="Stutz">
+            <label for="stutz">Stutz</label><br><br>
+            <label for="why">Tell us what you liked about your pick:</label><br>
+            <input type="text" id="comment" name="comment"><br>
+            <input type="submit" onclick="userComment()">
+        </aside>  
+    </main>
+    <footer>
+        <!-- creates a submit button form inside the footer and submit button that calls subscribe function-->
+        <form id="subscribe">
+            <label>SUBSCRIBE</label>
+            <label for="fname">Name:</label>
+            <input type="text" id="name" name="name"> 
+            <label for="email">Email:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit" onclick="subscribe()">
+        </form>
+        <p>Copyright &#169 Xio Appleby. All rights reserved.<br><a href="#theheading" >Back to top</a></p>
+    </footer>
+    <script type='text/javascript' src="scripts/freshTomatoes.js"></script>
+    </body> 
+    </html>
